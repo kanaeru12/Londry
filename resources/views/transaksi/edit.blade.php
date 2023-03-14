@@ -163,7 +163,8 @@
                         </div>
                     </div>
                     @if ($transaksi->dibayar=='belum dibayar')
-                    <button type="submit" class="btn btn-primary float-right w-25">Save</button>
+                    <button type="submit" class="btn btn-primary float-right w-25">Simpan</button>
+                    <a href="{{ route('transaksi.index') }}" class="btn btn-default">Kembali</a>
                     @endif
 
 

@@ -87,6 +87,7 @@
             </div>
             <div class="col-md-4 col-12 float-right">
                 <button type="submit" class="btn btn-primary btn-block">Tambah</button>
+                <a href="{{ route('transaksi.index') }}" class="btn btn-default">Kembali</a>
             </div>
 
 

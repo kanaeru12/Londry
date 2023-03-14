@@ -39,8 +39,8 @@
             </div>
 
 
-            <button type="submit" class="btn btn-primary">Save</button>
-            <a href="{{ route('outlet.index') }}" class="btn btn-default">Back to list</a>
+            <button type="submit" class="btn btn-primary">Simpan</button>
+            <a href="{{ route('outlet.index') }}" class="btn btn-default">Kembali</a>
 
         </form>
     </div>

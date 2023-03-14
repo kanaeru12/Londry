@@ -47,36 +47,36 @@
                             <div class="col-md-4 col-12">
                                 <div class="form-group">
                                     <label for="biaya_tambahan">Biaya Tambahan</label>
-                                    <input type="text" style=" border-bottom: 2px solid black;"
+                                    <input type="number" style=" border-bottom: 2px solid black;"
                                         class="form-control @error('biaya_tambahan') is-invalid @enderror"
                                         name="biaya_tambahan" id="biaya_tambahan" placeholder="nama paket"
                                         autocomplete="off" value="{{ old('biaya_tambahan') }}">
                                     @error('biaya_tambahan')
-                                    <span class="text-danger">{{ $message }}</span>
+                                    <span class="number-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
                             </div>
                             <div class="col-md-4 col-12">
                                 <div class="form-group">
                                     <label for="pajak">Pajak</label>
-                                    <input type="text" style=" border-bottom: 2px solid black;"
+                                    <input type="number" style=" border-bottom: 2px solid black;"
                                         class="form-control @error('pajak') is-invalid @enderror" name="pajak"
                                         id="pajak" placeholder="nama paket" autocomplete="off"
                                         value="{{ old('pajak') }}">
                                     @error('pajak')
-                                    <span class="text-danger">{{ $message }}</span>
+                                    <span class="number-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
                             </div>
                             <div class="col-md-4 col-12">
                                 <div class="form-group">
                                     <label for="diskon">Diskon</label>
-                                    <input type="text" style=" border-bottom: 2px solid black;"
+                                    <input type="number" style=" border-bottom: 2px solid black;"
                                         class="form-control @error('diskon') is-invalid @enderror" name="diskon"
                                         id="diskon" placeholder="nama paket" autocomplete="off"
                                         value="{{ old('diskon') }}">
                                     @error('diskon')
-                                    <span class="text-danger">{{ $message }}</span>
+                                    <span class="number-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
                             </div>

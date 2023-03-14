@@ -24,17 +24,17 @@ class DatabaseSeeder extends Seeder
         // User::create([
         //     'name' => 'uhuy',
         //     'last_name' => 'Administrator',
-        //     'email' => 'admin@mail.com',
-        //     'role' => 'admin',
+        //     'email' => 'Admin@mail.com',
+        //     'role' => 'Admin',
         //     'id_outlet' => '1',
         //     'email_verified_at' => now(),
         //     'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
         // ]);
         User::create([
-            'name' => 'Punuk Laundry',
+            'name' => 'Pengusa Laundry',
             'last_name' => 'Admin',
             'email' => 'yuhu@gmail.com',
-            'role' => 'admin',
+            'role' => 'Admin',
             'id_outlet' => '1',
             'email_verified_at' => now(),
             'password' => Hash::make('lembu123'), // password

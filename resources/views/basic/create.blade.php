@@ -12,28 +12,29 @@
             @csrf
 
             <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name">Nama Depan</label>
                 <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name"
-                    placeholder="First name" autocomplete="off" value="{{ old('name') }}">
+                    placeholder="Nama Depan" autocomplete="off" value="{{ old('name') }}">
                 @error('name')
                 <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
 
             <div class="form-group">
-                <label for="last_name">Last Name</label>
+                <label for="last_name">Nama Belakang</label>
                 <input type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name"
-                    id="last_name" placeholder="Last name" autocomplete="off" value="{{ old('last_name') }}">
+                    id="last_name" placeholder="Nama Belakang" autocomplete="off" value="{{ old('last_name') }}">
                 @error('last_name')
                 <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
 
             <div class="form-group">
-                <label for="role">Roles</label>
+                <label for="role">Peran</label>
                 <select class="form-select form-control @error('role') is-invalid @enderror" name="role" id="role"
                     placeholder="Roles" autocomplete="off" value="{{ old('role') }}">
-                    <option selected name="role">pilih role</option>
+                    <option selected name="role">pilih peran</option>
+                    <option value="admin">Admin</option>
                     <option value="owner">Owner</option>
                     <option value="kasir">Kasir</option>
 
@@ -42,6 +43,7 @@
                         <span class="text-danger">{{ $message }}</span>
                         @enderror
             </div>
+
             <div class="form-group">
                 <label for="outlet">Outlet</label>
                 <select class="form-select form-control @error('id_outlet') is-invalid @enderror" name="id_outlet" id="id_outlet"
@@ -74,8 +76,8 @@
                 @enderror
             </div>
 
-            <button type="submit" class="btn btn-primary">Save</button>
-            <a href="{{ route('basic.index') }}" class="btn btn-default">Back to list</a>
+            <button type="submit" class="btn btn-primary">Simpan</button>
+            <a href="{{ route('basic.index') }}" class="btn btn-default">Kembali</a>
 
         </form>
     </div>

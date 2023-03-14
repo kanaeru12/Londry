@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Top Binatu ahay</title>
+    <title>Top Binatu uhuy</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -73,7 +73,6 @@
                 <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
                         <a href="" class="nav-item nav-link active">Home</a>
-                        <a href="#about" class="nav-item nav-link">About</a>
                         <a href="#service" class="nav-item nav-link">Services</a>
                         <a href="#pricing" class="nav-item nav-link">Pricing</a>
                         <a href="#contact" class="nav-item nav-link">Contact</a>
@@ -103,7 +102,7 @@
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h4 class="text-white text-uppercase mb-md-3">Binatu & Cuci Kering</h4>
-                            <h1 class="display-3 text-white mb-md-4">Highly Professional Staff</h1>
+                            <h1 class="display-3 text-white mb-md-4">Staf yang Sangat Profesional</h1>
                         </div>
                     </div>
                 </div>
@@ -162,73 +161,6 @@
     </div>
     <!-- Contact Info End -->
 
-
-    <!-- About Start -->
-    <div class="container-fluid py-5" id="about">
-        <div class="container pt-0 pt-lg-4">
-            <div class="row justify-content-center">
-                <div class="col-12">
-                    <h6 class="text-secondary text-uppercase text-center font-weight-medium mb-3">Cari Pesanan</h6>
-                    <h1 class="display-4 text-center mb-5">Data Pesanan</h1>
-                </div>
-                <div class="col-10 p-3" style="background-color: #000000">
-                    <table class="table table-bordered table-stripped" id="tableKu">
-                        <thead>
-                            <tr style="background-color: #24256d; color: white;">
-                                <th>No.</th>
-                                <th>Kode Invoice</th>
-                                <th>Pelanggan</th>
-                                <th>Outlet</th>
-                                <th>Total Harga</th>
-                                <th>Status</th>
-                                <th>Dibayar</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($transaksi as $trx)
-                            <tr>
-                                <td scope="row">{{ $loop->iteration }}</td>
-                                <td>{{ $trx->kode_invoice }}</td>
-                                <td>{{ $trx->member->nama }}</td>
-                                <td>{{ $trx->outlet->nama }}</td>
-                                <td>Rp. {{ number_format($trx->total_harga,0,',','.') }}</td>
-
-                                <td>
-                                    @if ($trx->status == 'baru')
-                                    <span class="badge text-primary py-1 px-2"
-                                        style="font-size: 13px; border-radius: 20px; background-color: #49eee6">{{$trx->status}}</span>
-                                    @endif
-                                    @if ($trx->status == 'proses')
-                                    <span class="badge text-warning py-1 px-2"
-                                        style="font-size: 13px; border-radius: 20px; background-color: #fdff9b">{{$trx->status}}</span>
-                                    @endif
-                                    @if ($trx->status == 'diambil')
-                                    <span class="badge py-1 px-2"
-                                        style="font-size: 13px; border-radius: 20px; background-color: #ffdfc2; color: #ff9100">{{$trx->status}}</span>
-                                    @endif
-                                    @if ($trx->status == 'selesai')
-                                    <span class="badge text-success py-1 px-2"
-                                        style="font-size: 13px; border-radius: 20px; background-color: #b4ffa4">{{$trx->status}}</span>
-                                    @endif
-                                </td>
-                                <td>
-                                    @if ($trx->dibayar=='dibayar')
-                                    <span class="badge text-success py-1 px-2"
-                                        style="font-size: 13px; border-radius: 20px; background-color: #b4ffa4">{{$trx->dibayar}}</span>
-                                    @else()
-                                    <span class="badge text-danger py-1 px-2"
-                                        style="font-size: 13px; border-radius: 20px; background-color: #ffd9d9">{{$trx->dibayar}}</span>
-                                    @endif
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <!-- About End -->
-
-
             <!-- Services Start -->
             <div class="container-fluid pt-5 pb-3" id="service">
                 <div class="container">
@@ -252,7 +184,7 @@
                                     style="width: 100px; height: 100px;">
                                     <i class="fas fa-3x fa-soap text-secondary"></i>
                                 </div>
-                                <h4 class="font-weight-bold m-0">Wash & Binatu</h4>
+                                <h4 class="font-weight-bold m-0">Mencuci & Binatu</h4>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 pb-1">
@@ -262,7 +194,7 @@
                                     style="width: 100px; height: 100px;">
                                     <i class="fa fa-3x fa-burn text-secondary"></i>
                                 </div>
-                                <h4 class="font-weight-bold m-0">Curtain Binatu</h4>
+                                <h4 class="font-weight-bold m-0">Tirai Binatu</h4>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 pb-1">
@@ -272,7 +204,7 @@
                                     style="width: 100px; height: 100px;">
                                     <i class="fa fa-3x fa-tshirt text-secondary"></i>
                                 </div>
-                                <h4 class="font-weight-bold m-0">Suits Cleaning</h4>
+                                <h4 class="font-weight-bold m-0">Pembersihan Jas</h4>
                             </div>
                         </div>
                     </div>
@@ -320,7 +252,7 @@
                                 class="d-flex flex-column align-items-center justify-content-center bg-secondary h-100 py-5 px-3">
                                 <i class="fa fa-5x fa-certificate text-white mb-5"></i>
                                 <h1 class="display-1 text-white mb-3">15+</h1>
-                                <h1 class="text-white m-0">Years Top Binatu</h1>
+                                <h1 class="text-white m-0">Tahun Teratas Binatu</h1>
                             </div>
                         </div>
                     </div>
@@ -386,7 +318,7 @@
                         <div class="col-lg-4 mb-4">
                             <div class="bg-light text-center mb-2 pt-4">
                                 <div class="d-inline-flex flex-column align-items-center justify-content-center bg-secondary rounded-circle shadow mt-2 mb-4"
-                                    style="width: 200px; height: 200px; border: 15px solid #ffffff;">
+                                    style="width: 200px; height: 200px; border: 15px solid #485357;">
                                     <h3 class="text-white">Basic</h3>
                                     <h1 class="display-4 text-white mb-0">
                                         <small class="align-top"
@@ -398,10 +330,9 @@
                                 <div class="d-flex flex-column align-items-center py-3">
                                     <p>Min Berat 4Kg</p>
                                     <p>Layanan 2 hari Selesai</p>
-                                    <p>Cuci Kering - Cuci Basah</p>
+                                    <p>Cuci Basah</p>
                                     <p>Biaya Antar Jemput 20k</p>
                                 </div>
-                                <a href="" class="btn btn-secondary py-2 px-4">Order Now</a>
                             </div>
                         </div>
                         <div class="col-lg-4 mb-4">
@@ -422,13 +353,12 @@
                                     <p>Cuci Kering - Lipat - Setrika</p>
                                     <p>Free Antar Jemput</p>
                                 </div>
-                                <a href="" class="btn btn-primary py-2 px-4">Order Now</a>
                             </div>
                         </div>
                         <div class="col-lg-4 mb-4">
                             <div class="bg-light text-center mb-2 pt-4">
                                 <div class="d-inline-flex flex-column align-items-center justify-content-center bg-secondary rounded-circle shadow mt-2 mb-4"
-                                    style="width: 200px; height: 200px; border: 15px solid #ffffff;">
+                                    style="width: 200px; height: 200px; border: 15px solid #485357;">
                                     <h3 class="text-white">Premium</h3>
                                     <h1 class="display-4 text-white mb-0">
                                         <small class="align-top"
@@ -443,7 +373,6 @@
                                     <p>Cuci Kering - Lipat</p>
                                     <p>Free Antar Jemput</p>
                                 </div>
-                                <a href="" class="btn btn-secondary py-2 px-4">Order Now</a>
                             </div>
                         </div>
                     </div>
@@ -611,14 +540,14 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mb-5">
-                        <h4 class="text-white mb-4">Get In Touch</h4>
+                        <h4 class="text-white mb-4">Berhubungan</h4>
                         <p>Info Lebih Lanjut</p>
                         <p><i class="fa fa-map-marker-alt mr-2"></i>Jl BanjarKemantren, Buduran, Sidoarjo</p>
                         <p><i class="fa fa-phone-alt mr-2"></i>+62 831-4781-0386</p>
                         <p><i class="fa fa-envelope mr-2"></i>panggilajairdiansyah@gmail.com</p>
                     </div>
                     <div class="col-lg-4 col-md-6 mb-5">
-                        <h4 class="text-white mb-4">Quick Links</h4>
+                        <h4 class="text-white mb-4">Tautan Langsung</h4>
                         <div class="d-flex flex-column justify-content-start">
                             <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
                             <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
@@ -631,10 +560,10 @@
             </div>
             <div class="container-fluid bg-dark text-white py-4 px-sm-3 px-md-5">
                 <p class="m-0 text-center text-white">
-                    &copy; <a class="text-white font-weight-medium" href="#">Your Site Name</a>. All Rights Reserved.
+                    &copy; <a class="text-white font-weight-medium" href="#">Nama Status Anda</a>. Seluruh Hak Cipta.
 
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed by <a class="text-white font-weight-medium" href="https://htmlcodex.com">HTML Codex</a>
+                   Dirancang Oleh <a class="text-white font-weight-medium" href="https://htmlcodex.com">HTML Codex</a>
                 </p>
             </div>
             <!-- Footer End -->

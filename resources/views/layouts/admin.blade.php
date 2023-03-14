@@ -11,7 +11,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>We Serve You Better - Top Laundry</title>
+    <title>Laundry uhuy</title>
 
     <!-- Fonts -->
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
@@ -41,9 +41,9 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('home') }}">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+                    <i class="fas fa-user-lock"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Hi, {{ Auth::user()->role }}</div>
+                <div class="sidebar-brand-text mx-3">Hi, Laundry Uhuy {{ Auth::user()->role }}</div>
             </a>
 
             <!-- Divider -->
@@ -56,7 +56,7 @@
             <!-- Nav Item - Dashboard -->
             <li class="nav-item {{ Nav::isRoute('home') }}">
                 <a class="nav-link" href="{{ route('home') }}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i class="fas fa-columns"></i>
                     <span>{{ __('Dashboard') }}</span></a>
             </li>
            
@@ -66,7 +66,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                {{ __('Master Data') }}
+                {{ __('Daftar Data') }}
             </div>
 
             <!-- Nav Item - Profile -->
@@ -75,14 +75,14 @@
             @if (Auth::user()->role=='admin')
             <li class="nav-item {{ Nav::isRoute('basic.index') }}">
                 <a class="nav-link" href="{{ route('basic.index') }}">
-                    <i class="fas fa-fw fa-users"></i>
+                    <i class="fas fa-user-tie"></i>
                     <span>{{ __('Pengguna') }}</span>
                 </a>
             </li>
 
             <li class="nav-item {{ Nav::isRoute('member.index') }}">
                 <a class="nav-link" href="{{ route('member.index') }}">
-                    <i class="fas fa-fw fa-user-circle"></i>
+                    <i class="fas fa-user-alt"></i>
                     <span>{{ __('Membership') }}</span>
                 </a>
             </li>
@@ -297,7 +297,7 @@
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Pilih "Keluar" di bawah jika Anda siap untuk mengakhiri sesi Anda saat ini.</div>
                 <div class="modal-footer">
                     <button class="btn btn-link" type="button" data-dismiss="modal">{{ __('Cancel') }}</button>
                     <a class="btn btn-danger" href="{{ route('logout') }}"
